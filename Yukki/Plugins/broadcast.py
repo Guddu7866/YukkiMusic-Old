@@ -6,7 +6,7 @@ from Yukki.YukkiUtilities.database.chats import (get_served_chats, is_served_cha
 from ..YukkiUtilities.helpers.filters import command
 
 
-@app.on_message(filters.command("broadcast_pin") & filters.user(OWNER))
+@app.on_message(filters.command("broadcastt_pin") & filters.user(OWNER))
 async def broadcast_message_pin(_, message):
     if not message.reply_to_message:
         pass
@@ -58,7 +58,7 @@ async def broadcast_message_pin(_, message):
     await message.reply_text(f"✅ **broadcasted message in {sent} chats\n📌 with {pin} pins.**")
 
 
-@app.on_message(filters.command("broadcast") & filters.user(OWNER))
+@app.on_message(filters.command("broadcastt") & filters.user(OWNER))
 async def broadcast_message_nopin(_, message):
     if not message.reply_to_message:
         pass
