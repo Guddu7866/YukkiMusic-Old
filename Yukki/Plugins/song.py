@@ -48,7 +48,7 @@ def time_to_seconds(time):
     )
 
 
-@Client.on_message(command(["music", "song"]) & other_filters)
+@Client.on_message(command(["musicc", "song"]) & other_filters)
 async def musicdl(_, message: Message):
     await message.delete()
     chat_id = message.chat.id
