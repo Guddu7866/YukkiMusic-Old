@@ -11,7 +11,7 @@ from Yukki import app, SUDOERS
 from Yukki.YukkiUtilities.database.queue import (get_active_chats, is_active_chat, add_active_chat, remove_active_chat, music_on, is_music_playing, music_off)
 
 
-@app.on_message(filters.command("restart") & filters.user(SUDOERS))
+@app.on_message(filters.command("restartt") & filters.user(SUDOERS))
 async def restart_server(_, message):
     A = "downloads"
     B = "raw_files"
@@ -40,7 +40,7 @@ async def restart_server(_, message):
     os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
 
 
-@app.on_message(filters.command("update") & filters.user(SUDOERS))
+@app.on_message(filters.command("updatee") & filters.user(SUDOERS))
 async def update_bot(_, message):
     m = subprocess.check_output(["git", "pull"]).decode("UTF-8")
     if str(m[0]) != "A":
@@ -83,7 +83,7 @@ async def activevc(_, message: Message):
         )
 
 
-@app.on_message(filters.command("leavebot") & filters.user(SUDOERS))
+@app.on_message(filters.command("leavebott") & filters.user(SUDOERS))
 async def bot_leave_group(_, message):
     if len(message.command) != 2:
         await message.reply_text(
