@@ -21,7 +21,7 @@ async def bot_sys_stats():
     return stats
 
 
-@app.on_message(filters.command(["ping", "ping@VeezMegaBot"]))
+@app.on_message(filters.command(["pingg", "ping@VeezMegaBot"]))
 async def ping(_, message):
     response = await message.reply_photo(
         photo="cache/ping.png",
